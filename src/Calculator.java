@@ -8,7 +8,7 @@ public class Calculator<Public> {
     BinaryOperator<Integer> plus = (x, y) -> x + y;
     BinaryOperator<Integer> minus = (x, y) -> x - y;
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
-    BinaryOperator<Integer> divide = (x, y) -> y == 0 ? Integer.valueOf(("Деление на 0")) : (x / y);
+    BinaryOperator<Integer> divide = (x, y) -> y == 0 ? 0 : (x / y); //Integer.valueOf(("Деление на 0"))
 
     UnaryOperator<Integer> pow = x -> x * x;
     UnaryOperator<Integer> abs = x -> x > 0 ? x : x * -1;
